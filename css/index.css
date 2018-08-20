@@ -187,7 +187,8 @@ body {
   padding-top: 20%;
   position: absolute;
   top: 60%;
-  left: 20.5%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .btn-img {
   background-image: url('../images/btn_shenqing.png');
@@ -517,6 +518,20 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
+.content_btn {
+  position: absolute;
+  left: 4%;
+  top: 9%;
+  width: 92%;
+  height: 17.7%;
+  font-size: 0;
+  z-index: 10;
+}
+.content_btn_left, .content_btn_right {
+  width: 50%;
+  display: inline-block;
+  height: 100%;
+}
 .content_5_left-img {
   background-image: url('../images/img_content_bojinka.png');
 }
@@ -593,7 +608,6 @@ body {
 }
 .page_6 .btn {
   top: 70.2%;
-  left: 17.5%;
 }
 /* .btn-img {
   background-image: url('../images/btn_shenqing.png');

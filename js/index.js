@@ -55,6 +55,12 @@ var app = {
   page4: {
     btn: document.querySelector('.page_4 .btn_4')
   },
+  page5: {
+    btnLeft: document.querySelector('.page_5 .content_btn_left'),
+    btnRight: document.querySelector('.page_5 .content_btn_right'),
+    contentLeft: document.querySelector('.page_5 .content_5_left-img'),
+    contentRight: document.querySelector('.page_5 .content_5_right-img')
+  },
   page6: {
     btn: document.querySelector('.page_6 .btn')
   },
@@ -129,6 +135,14 @@ var app = {
     })
     app.close.choose.addEventListener('click', function () {
       app.popup.choose.style.display = 'none';
+    })
+    app.page5.btnLeft.addEventListener('click', function () {
+      app.page5.contentLeft.style.display = 'block';
+      app.page5.contentRight.style.display = 'none';
+    })
+    app.page5.btnRight.addEventListener('click', function () {
+      app.page5.contentLeft.style.display = 'none';
+      app.page5.contentRight.style.display = 'block';
     })
   },
   page_1_init: function () {
