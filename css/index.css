@@ -110,7 +110,7 @@ body {
   background-image: url('../images/img_play.png');
 }
 .page_1 .plane-start {
-  top: 57.1%;
+  top: 60.1%;
   left: -67.2%;
 }
 
@@ -286,7 +286,7 @@ body {
 .icon_top {
   width: 8.8%;
   height: 0;
-  padding-top: 8.8%;
+  padding-top: 9.8%;
   position: absolute;
   left: 9.1%;
 }
@@ -298,7 +298,7 @@ body {
   right: 9.2%;
 }
 .icon_top-start {
-  top: 18%;
+  top: 22%;
   opacity: 0;
 }
 .icon_top-end {
@@ -306,7 +306,7 @@ body {
   opacity: 1;
 }
 .icon_bottom-start {
-  top: 17%;
+  top: 21%;
   opacity: 0;
 }
 .icon_bottom-end {
@@ -314,14 +314,14 @@ body {
   opacity: 1;
 }
 .icon_top_animate {
-  animation: icon_top_animation 1s 1;
+  animation: icon_top_animation 0.5s 1;
 }
 .icon_bottom_animate {
-  animation: icon_bottom_animation 1s 1;
+  animation: icon_bottom_animation 0.5s 1;
 }
 @keyframes icon_top_animation {
   0% {
-    top: 18%;
+    top: 22%;
     opacity: 0;
   }
   50% {
@@ -335,7 +335,7 @@ body {
 }
 @keyframes icon_bottom_animation {
   0% {
-    top: 17%;
+    top: 21%;
     opacity: 0;
   }
   50% {
