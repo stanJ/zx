@@ -53,15 +53,31 @@ var app = {
     iconBottom: document.querySelector('.page_3 .icon_bottom')
   },
   page4: {
+    plane: document.querySelector('.page_4 .plane'),
+    protect: document.querySelector('.page_4 .protect'),
+    title: document.querySelector('.page_4 .title_4'),
+    content: document.querySelector('.page_4 .content_4'),
+    lineTop: document.querySelector('.page_4 .line_top'),
+    lineBottom: document.querySelector('.page_4 .line_bottom'),
     btn: document.querySelector('.page_4 .btn_4')
   },
   page5: {
     btnLeft: document.querySelector('.page_5 .content_btn_left'),
     btnRight: document.querySelector('.page_5 .content_btn_right'),
     contentLeft: document.querySelector('.page_5 .content_5_left-img'),
-    contentRight: document.querySelector('.page_5 .content_5_right-img')
+    contentRight: document.querySelector('.page_5 .content_5_right-img'),
+    title: document.querySelector('.page_5 .title_5'),
+    plane: document.querySelector('.page_5 .plane'),
+    cloud: document.querySelector('.page_5 .cloud_5'),
+    content: document.querySelector('.page_5 .content_5')
   },
   page6: {
+    title: document.querySelector('.page_6 .title'),
+    plane: document.querySelector('.page_6 .plane'),
+    card1: document.querySelector('.page_6 .card_1'),
+    card2: document.querySelector('.page_6 .card_2'),
+    cloud: document.querySelector('.page_6 .cloud_6'),
+    name: document.querySelector('.page_6 .card_name'),
     btn: document.querySelector('.page_6 .btn')
   },
   initSlide: function () {
@@ -182,13 +198,49 @@ var app = {
     addStartClass(iconBottom, 'icon_bottom');
   },
   page_4_init: function () {
-
+    var plane = app.page4.plane;
+    var protect = app.page4.protect;
+    var title = app.page4.title;
+    var content = app.page4.content;
+    var lineTop = app.page4.lineTop;
+    var lineBottom = app.page4.lineBottom;
+    var btn = app.page4.btn;
+    
+    addStartClass(plane, 'plane');
+    addStartClass(protect, 'protect');
+    addStartClass(title, 'title_4');
+    addStartClass(content, 'content_4');
+    addStartClass(lineTop, 'line_top');
+    addStartClass(lineBottom, 'line_bottom');
+    addStartClass(btn, 'btn_4');
   },
   page_5_init: function () {
-
+    var title = app.page5.title;
+    var plane = app.page5.plane;
+    var cloud = app.page5.cloud;
+    var content = app.page5.content;
+    
+    addStartClass(title, 'title_5');
+    addStartClass(plane, 'plane');
+    addStartClass(cloud, 'cloud_5');
+    addStartClass(content, 'content_5');
   },
   page_6_init: function () {
+    var title = app.page6.title;
+    var plane = app.page6.plane;
+    var card1 = app.page6.card1;
+    var card2 = app.page6.card2;
+    var cloud = app.page6.cloud;
+    var name = app.page6.name;
+    var btn = app.page6.btn;
 
+    addStartClass(title, 'title');
+    addStartClass(plane, 'plane');
+    addStartClass(card1, 'card_1');
+    addStartClass(card2, 'card_2');
+    addStartClass(cloud, 'cloud_6');
+    addStartClass(name, 'card_name');
+    addStartClass(btn, 'btn');
   },
   page_1_animate: function () {
     var plane = app.page1.plane;
@@ -278,20 +330,11 @@ var app = {
     })
     app.page_3_init();
     setTimeout(function () {
-      // plane.style.transition = 'top 1s linear, left 1s linear';
-      // card1.style.transition = 'top 0.5s, opacity 0.5s';
-      // card2.style.transition = 'top 0.5s, opacity 0.5s';
-      // cloud.style.transition = 'opacity 0.1s';
-      // name.style.transition = 'opacity 0.3s';
-      // btn.style.transition = 'opacity 0.3s';
-
       plane.style.transition = 'top 1s linear, left 1s linear';
       content1.style.transition = 'top 1s, opacity 1s';
       content2.style.transition = 'top 1s, opacity 1s';
       cloudTop.style.transition = 'right 0.3s';
       cloudBottom.style.transition = 'left 0.3s';
-      // iconTop.style.transition = '';
-      // iconBottom.style.transition = '';
     }, 20);
     setTimeout(function () {
       addEndClass(cloudTop, 'cloud_top');
@@ -316,13 +359,125 @@ var app = {
     }, 2000)
   },
   page_4_animate: function () {
-
+    var plane = app.page4.plane;
+    var protect = app.page4.protect;
+    var title = app.page4.title;
+    var content = app.page4.content;
+    var lineTop = app.page4.lineTop;
+    var lineBottom = app.page4.lineBottom;
+    var btn = app.page4.btn;
+    plane.addEventListener('transitionend', function () {
+      plane.style.transition = '';
+      protect.style.transition = '';
+      title.style.transition = '';
+      content.style.transition = '';
+      lineTop.style.transition = '';
+      lineBottom.style.transition = '';
+    })
+    btn.addEventListener('animationend', function () {
+      addEndClass(btn, 'btn_4');
+      removeClass(btn, 'btn_4_animate');
+    })
+    app.page_4_init();
+    setTimeout(function () {
+      plane.style.transition = 'right 1s linear';
+      protect.style.transition = 'width 0.8s, padding-top 0.8s';
+      title.style.transition = 'top 0.3s, opacity 0.3s';
+      content.style.transition = 'opacity 0.2s linear';
+      lineTop.style.transition = 'top 0.3s';
+      lineBottom.style.transition = 'top 0.3s';
+    }, 20);
+    setTimeout(function () {
+      addEndClass(title, 'title_4');
+      addEndClass(lineTop, 'line_top');
+      addEndClass(lineBottom, 'line_bottom');
+    }, 100)
+    setTimeout(function () {
+      addEndClass(content, 'content_4');
+    }, 400)
+    setTimeout(function () {
+      addClass(btn, 'btn_4_animate');
+    }, 600)
+    setTimeout(function () {
+      addEndClass(protect, 'protect');
+    }, 900)
+    setTimeout(function () {
+      addEndClass(plane, 'plane');
+    }, 1700)
   },
   page_5_animate: function () {
-
+    var title = app.page5.title;
+    var plane = app.page5.plane;
+    var cloud = app.page5.cloud;
+    var content = app.page5.content;
+    plane.addEventListener('transitionend', function () {
+      plane.style.transition = '';
+      cloud.style.transition = '';
+      title.style.transition = '';
+      content.style.transition = '';
+    })
+    app.page_5_init();
+    setTimeout(function () {
+      plane.style.transition = 'top 1s linear, left 1s linear';
+      cloud.style.transition = 'opacity 0.3s';
+      title.style.transition = 'opacity 0.3s';
+      content.style.transition = 'top 0.5s, opacity 0.5s';
+    }, 20);
+    setTimeout(function () {
+      addEndClass(title, 'title_5');
+      addEndClass(cloud, 'cloud_5');
+    }, 100)
+    setTimeout(function () {
+      addEndClass(content, 'content_5');
+    }, 400)
+    setTimeout(function () {
+      addEndClass(plane, 'plane');
+    }, 900)
   },
   page_6_animate: function () {
-
+    var title = app.page6.title;
+    var plane = app.page6.plane;
+    var card1 = app.page6.card1;
+    var card2 = app.page6.card2;
+    var cloud = app.page6.cloud;
+    var name = app.page6.name;
+    var btn = app.page6.btn;
+    plane.addEventListener('transitionend', function () {
+      title.style.transition = '';
+      plane.style.transition = '';
+      card1.style.transition = '';
+      card2.style.transition = '';
+      cloud.style.transition = '';
+      name.style.transition = '';
+      btn.style.transition = '';
+    })
+    app.page_6_init();
+    setTimeout(function () {
+      title.style.transition = 'opacity 0.3s';
+      cloud.style.transition = 'opacity 0.3s';
+      card1.style.transition = 'top 0.5s, opacity 0.5s';
+      card2.style.transition = 'top 0.5s, opacity 0.5s';
+      name.style.transition = 'opacity 0.3s';
+      btn.style.transition = 'opacity 0.3s';
+      plane.style.transition = 'top 1s linear, right 1s linear';
+    }, 20);
+    setTimeout(function () {
+      addEndClass(title, 'title');
+      addEndClass(cloud, 'cloud_6');
+    }, 100)
+    setTimeout(function () {
+      addEndClass(card1, 'card_1');
+    }, 400)
+    setTimeout(function () {
+      addEndClass(card2, 'card_2');
+    }, 900)
+    setTimeout(function () {
+      addEndClass(name, 'card_name');
+      addEndClass(btn, 'btn');
+    }, 1400)
+    setTimeout(function () {
+      addEndClass(plane, 'plane');
+    }, 1700)
   },
 }
 
