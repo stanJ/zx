@@ -224,6 +224,7 @@ var app = {
     addStartClass(plane, 'plane');
     addStartClass(cloud, 'cloud_5');
     addStartClass(content, 'content_5');
+    // clearTimeout(app.page5.timer_plane);
   },
   page_6_init: function () {
     var title = app.page6.title;
@@ -241,6 +242,7 @@ var app = {
     addStartClass(cloud, 'cloud_6');
     addStartClass(name, 'card_name');
     addStartClass(btn, 'btn');
+    // clearTimeout(app.page6.timer_plane);
   },
   page_1_animate: function () {
     var plane = app.page1.plane;
@@ -430,7 +432,7 @@ var app = {
     setTimeout(function () {
       addEndClass(content, 'content_5');
     }, 400)
-    setTimeout(function () {
+    app.page5.timer_plane = setTimeout(function () {
       addEndClass(plane, 'plane');
     }, 900)
   },
@@ -475,7 +477,7 @@ var app = {
       addEndClass(name, 'card_name');
       addEndClass(btn, 'btn');
     }, 1400)
-    setTimeout(function () {
+    app.page6.timer_plane =  setTimeout(function () {
       addEndClass(plane, 'plane');
     }, 1700)
   },

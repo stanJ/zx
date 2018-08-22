@@ -543,7 +543,7 @@ body {
 }
 .page_5 .plane-start {
   top: 20%;
-  left: -52.4%;
+  left: -53.4%;
 }
 .page_5 .plane-end {
   top: 16%;
@@ -616,7 +616,7 @@ body {
   left: 3.7%;
 }
 .page_6 .title-start {
-  opacity: 0.3;
+  opacity: 0;
 }
 .page_6 .title-end {
   opacity: 1;
@@ -662,7 +662,7 @@ body {
   left: 0;
 }
 .page_6 .cloud_6-start {
-  opacity: 0.3;
+  opacity: 0;
 }
 .page_6 .cloud_6-end {
   opacity: 1;
