@@ -102,16 +102,29 @@ body {
 .page_1 .title-end {
   opacity: 1;
 }
-.page_1 .plane-end {
-  top: 40%;
-  left: 20.5%;
-}
 .plane-img {
   background-image: url('../images/img_play.png');
 }
 .page_1 .plane-start {
-  top: 60.1%;
+  top: 65.1%;
   left: -67.2%;
+}
+.page_1 .plane-end {
+  top: 40%;
+  left: 20.5%;
+}
+.page_1 .plane_1_animate {
+  animation: plane_1_animation 0.9s linear;
+}
+@keyframes plane_1_animation {
+  0% {
+    top: 65.1%;
+    left: -67.2%;
+  }
+  100% {
+    top: 40%;
+    left: 20.5%;
+  }
 }
 
 /* page_2 */
@@ -122,6 +135,19 @@ body {
 .page_2 .plane-end {
   top: 5%;
   left: 0%;
+}
+.page_2 .plane_2_animate {
+  animation: plane_2_animation 0.8s linear;
+}
+@keyframes plane_2_animation {
+  0% {
+    top: 18%;
+    left: -67.2%;
+  }
+  100% {
+    top: 5%;
+    left: 0%;
+  }
 }
 .card_1, .card_2 {
   width: 26.1%;
@@ -158,7 +184,7 @@ body {
 .cloud {
   width: 100%;
   height: 0;
-  padding-top: 41.3%;
+  padding-top: 52.1%;
   position: absolute;
   top: 38%;
   left: 0;
@@ -248,7 +274,7 @@ body {
   top: 16.8%;
 }
 .cloud_bottom {
-  width: 47.7%;
+  width: 60.8%;
   height: 0;
   padding-top: 20.1%;
   position: absolute;
@@ -282,6 +308,23 @@ body {
 .page_3 .plane-end {
   top: 24%;
   left: 4.7%;
+}
+.page_3 .plane_3_animate {
+  animation: plane_3_animation 0.8s linear;
+}
+@keyframes plane_3_animation {
+  0% {
+    top: 28%;
+    left: -68%;
+  }
+  /* 50% {
+    top: 26%;
+    left: -34%;
+  } */
+  100% {
+    top: 24%;
+    left: 4.7%;
+  }
 }
 .icon_top {
   width: 8.8%;
@@ -400,10 +443,25 @@ body {
 }
 .page_4 .plane-start {
   /* left: -52.4%; */
+  top: 12%;
   right: 101%;
 }
 .page_4 .plane-end {
+  top: 7%;
   right: 1.5%;
+}
+.page_4 .plane_4_animate {
+  animation: plane_4_animation 0.9s linear;
+}
+@keyframes plane_4_animation {
+  0% {
+    top: 12%;
+    right: 101%;
+  }
+  100% {
+    top: 7%;
+    right: 1.5%;
+  }
 }
 .title_4 {
   width: 44.8%;
@@ -542,12 +600,25 @@ body {
   transform: rotateZ(11deg);
 }
 .page_5 .plane-start {
-  top: 20%;
+  top: 22%;
   left: -53.4%;
 }
 .page_5 .plane-end {
   top: 16%;
   left: 27.2%;
+}
+.page_5 .plane_5_animate {
+  animation: plane_5_animation 0.9s linear;
+}
+@keyframes plane_5_animation {
+  0% {
+    top: 22%;
+    left: -53.4%;
+  }
+  100% {
+    top: 16%;
+    left: 27.2%;
+  }
 }
 .content_5 {
   width: 94%;
@@ -588,7 +659,7 @@ body {
 .cloud_5 {
   width: 100%;
   height: 0;
-  padding-top: 18.4%;
+  padding-top: 26.7%;
   position: absolute;
   top: 60.9%;
   left: 50%;
@@ -629,27 +700,40 @@ body {
   top: 8.4%;
   right: 2.9%;
 }
+.page_6 .plane_6_animate {
+  animation: plane_6_animation 0.9s linear;
+}
+@keyframes plane_6_animation {
+  0% {
+    top: 28.4%;
+    right: 100%;
+  }
+  100% {
+    top: 8.4%;
+    right: 2.9%;
+  }
+}
 .page_6 .plane {
   width: 60.5%;
   padding-top: 20.9%;
 }
 .page_6 .card_1-start {
-  top: 49%;
+  top: 51%;
   left: 25.3%;
   opacity: 0;
 }
 .page_6 .card_2-start {
-  top: 49%;
+  top: 51%;
   left: 48%;
   opacity: 0;
 }
 .page_6 .card_1-end {
-  top: 38.5%;
+  top: 40.5%;
   left: 25.3%;
   opacity: 1;
 }
 .page_6 .card_2-end {
-  top: 38.5%;
+  top: 40.5%;
   left: 48%;
   opacity: 1;
 }
