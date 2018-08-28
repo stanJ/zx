@@ -112,6 +112,9 @@ body {
 .page_1 .plane-end {
   top: 40%;
   left: 20.5%;
+  /* top: 65.1%;
+  left: -67.2%;
+  transform: translate3d(130.5%, -192.4%, 0); */
 }
 .page_1 .plane_1_animate {
   animation: plane_1_animation 0.9s linear;
@@ -124,6 +127,9 @@ body {
   100% {
     top: 40%;
     left: 20.5%;
+    /* top: 65.1%;
+    left: -67.2%;
+    transform: translate3d(130.5%, -192.4%, 0); */
   }
 }
 
@@ -831,4 +837,30 @@ body {
 }
 .popup_choose-img {
   background-image: url('../images/img_popup_choose.png');
+}
+.get_card {
+  position: absolute;
+  width: 31.6%;
+  padding-top: 9.5%;
+  bottom: 16.5%;
+  height: 0;
+}
+.get_card_1 {
+  left: 14%;
+}
+.get_card_2 {
+  left: 55%;
+}
+.card_href {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  top: 0;
+}
+.text_href {
+  text-decoration: none;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  color: inherit;
 }
